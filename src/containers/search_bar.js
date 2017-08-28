@@ -10,13 +10,16 @@ export default class SearchBar extends Component {
     }
 
     onInputChange(event) {
-        console.log(event.target.value);
         this.setState({term: event.target.value});
+    }
+
+    onFormSubmit(event) {
+        event.preventDefault();
     }
 
     render() {
         return(
-            <form className="form-inline">
+            <form onSubmit={ this.onFormSubmit } className="form-inline">
                 <input 
                     className="form-control col-md-4" 
                     type="text"  
