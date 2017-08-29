@@ -6,7 +6,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-          <SearchBar/>
+          <div className="row justify-content-center">
+                <SearchBar/>
+          </div>
+          
           <WeatherList/>
       </div>
     );

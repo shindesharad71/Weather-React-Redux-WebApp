@@ -26,16 +26,18 @@ class SearchBar extends Component {
 
     render() {
         return(
-            <form onSubmit={ this.onFormSubmit } className="form-inline">
-                <input 
-                    className="form-control col-md-4" 
-                    type="text"  
-                    placeholder="Search City" 
-                    value={ this.state.term }
-                    onChange={this.onInputChange}
-                />
-                <button className="btn btn-outline-primary" type="submit">Search</button>
-            </form>
+            <div className="col-md-6" style={{marginBottom: '20px'}}>
+                <form onSubmit={ this.onFormSubmit }>
+                    <input 
+                        className="form-control form-control-lg" 
+                        type="text"  
+                        placeholder="Search City In India" 
+                        value={ this.state.term }
+                        onChange={this.onInputChange}
+                    />
+                </form>
+            </div>
+            
         );
     }
 }
